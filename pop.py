@@ -28,7 +28,10 @@ def dell():
             user, pw = line.strip().split('|')
             if user != user_del:
                 f.write(line)
-    print('bien supp')
+    if not lines:
+        print('aucun user')
+    else:
+        print('bien supp')
 
 while True:
     answer = input('entre add or view or effacer or del par user or (q=quit): ').lower()
